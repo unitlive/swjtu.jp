@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZ88KGEVPJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LZ88KGEVPJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 西南交通大学日本校友会</title>
+    <meta name="keywords" content="西南交通大学, 日本校友会, 揚華会, 联系我们">
+    <meta name="description" content="西南交通大学日本校友会联系方式">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fixmenu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="inner">
+        <div id="logo">
+            <a href="index.html">
+                <img src="images/logo_icon.png" alt="西南交通大学日本校友会">
+            </a>
+        </div>
+        <div id="site-title">
+            <h1>西南交通大学日本校友会</h1>
+            <span class="subtitle">揚華会 | SWJTU Japan Alumni Association</span>
+        </div>
+        <ul id="h-nav">
+            <li><a href="https://swjtu.jp" target="_blank" title="西南交通大学日本校友会"><i class="fas fa-university"></i></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i></a></a></li>
+        </ul>
+    </div>
+</header>
+
+<nav id="menubar" class="nav-fix-pos">
+    <ul>
+        <li><a href="index.html">首 页</a></li>
+        <li><a href="news.html">最新动态</a></li>
+        <li><a href="notice.html">通 知</a></li>
+        <li><a href="photos.html">活动照片</a></li>
+        <li><a href="signup.html">校友注册</a></li>
+        <li class="current"><a href="contact.html">联系我们</a></li>
+        <li><a href="about.html">关于我们</a></li>
+    </ul>
+</nav>
+
+<nav id="menubar-s">
+    <ul>
+        <li><a href="index.html">首 页</a></li>
+        <li><a href="news.html">最新动态</a></li>
+        <li><a href="notice.html">通 知</a></li>
+        <li><a href="photos.html">活动照片</a></li>
+        <li><a href="about.html">关于我们</a></li>
+        <li><a href="signup.html">校友注册</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+    </ul>
+</nav>
+
+<div id="contents">
+
+    <div id="main">
+        
+        <h2><i class="fas fa-address-book"></i> 联系我们</h2>
+        <p>欢迎通过以下方式与西南交通大学日本校友会取得联系。</p>
+
+        <section class="contact-section" id="contact-form">
+            <h3><i class="fas fa-paper-plane"></i> 在线留言</h3>
+            <p>如有任何问题或建议，请填写以下表单，我们会尽快回复。<br><span class="required">*</span> 标记的项目为必填项。</p>
+
+            <form class="contact-form" action="cgi/mailform.php" method="post">
+                <table class="ta1 mb1em">
+                    <tr>
+                        <th class="tamidashi" colspan="2">在线留言表单 - 校友会问询</th>
+                    </tr>
+                    
+                    <!-- 基本信息 -->
+                    <tr>
+                        <th class="tamidashi2" colspan="2"><i class="fas fa-user"></i> 基本信息</th>
+                    </tr>
+                    <tr>
+                        <th>姓名 <span class="required">*</span></th>
+                        <td>
+                            <input type="text" name="customer" required class="ws" placeholder="请输入您的姓名（中文或日文）">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>姓名（拼音/ローマ字） <span class="required">*</span></th>
+                        <td>
+                            <input type="text" name="customer_romaji" required class="ws" placeholder="例：ZHANG San / Yamada Taro">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>性别 <span class="required">*</span></th>
+                        <td>
+                            <label><input type="radio" name="gender" value="male" required> 男</label>
+                            <label><input type="radio" name="gender" value="female" required> 女</label>
+                            <label><input type="radio" name="gender" value="other" required> 不愿透露</label>
+                        </td>
+                    </tr>
+                    
+                    <!-- 联系方式 -->
+                    <tr>
+                        <th class="tamidashi2" colspan="2"><i class="fas fa-address-card"></i> 联系方式</th>
+                    </tr>
+                    <tr>
+                        <th>邮箱 <span class="required">*</span></th>
+                        <td>
+                            <input type="email" name="mailfrom" required class="ws" placeholder="请输入您的邮箱地址">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>确认邮箱 <span class="required">*</span></th>
+                        <td>
+                            <input type="email" name="mailfrom_confirm" required class="ws" placeholder="请再次输入邮箱地址确认">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>电话号码 <span class="required">*</span></th>
+                        <td>
+                            <input type="tel" name="phone" required class="ws" placeholder="例：090-1234-5678">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>现居住地 <span class="required">*</span></th>
+                        <td>
+                            <select name="residence" required class="ws">
+                                <option value="">请选择</option>
+                                <option value="tokyo">東京都</option>
+                                <option value="kanagawa">神奈川県</option>
+                                <option value="saitama">埼玉県</option>
+                                <option value="chiba">千葉県</option>
+                                <option value="osaka">大阪府</option>
+                                <option value="kyoto">京都府</option>
+                                <option value="aichi">愛知県</option>
+                                <option value="hyogo">兵庫県</option>
+                                <option value="fukuoka">福岡県</option>
+                                <option value="hokkaido">北海道</option>
+                                <option value="other_japan">日本其他地区</option>
+                                <option value="china">中国</option>
+                                <option value="other_overseas">其他海外地区</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <!-- 校友信息 -->
+                    <tr>
+                        <th class="tamidashi2" colspan="2"><i class="fas fa-graduation-cap"></i> 校友信息</th>
+                    </tr>
+                    <tr>
+                        <th>是否为西南交大校友 <span class="required">*</span></th>
+                        <td>
+                            <label><input type="radio" name="is_alumni" value="yes" required> 是</label>
+                            <label><input type="radio" name="is_alumni" value="no" required> 否</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>毕业/在籍年份 <span class="required">*</span></th>
+                        <td>
+                            <select name="graduation_year" required class="ws">
+                                <option value="">请选择</option>
+                                <option value="non_alumni">非校友</option>
+                                <option value="2024">2024年</option>
+                                <option value="2023">2023年</option>
+                                <option value="2022">2022年</option>
+                                <option value="2021">2021年</option>
+                                <option value="2020">2020年</option>
+                                <option value="2019">2019年</option>
+                                <option value="2018">2018年</option>
+                                <option value="2017">2017年</option>
+                                <option value="2016">2016年</option>
+                                <option value="2015">2015年</option>
+                                <option value="2010-2014">2010-2014年</option>
+                                <option value="2005-2009">2005-2009年</option>
+                                <option value="2000-2004">2000-2004年</option>
+                                <option value="1995-1999">1995-1999年</option>
+                                <option value="1990-1994">1990-1994年</option>
+                                <option value="before1990">1990年以前</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>学历/身份 <span class="required">*</span></th>
+                        <td>
+                            <select name="degree" required class="ws">
+                                <option value="">请选择</option>
+                                <option value="non_alumni">非校友</option>
+                                <option value="bachelor">本科毕业</option>
+                                <option value="master">硕士毕业</option>
+                                <option value="doctor">博士毕业</option>
+                                <option value="exchange">交换留学生</option>
+                                <option value="faculty">教职员工</option>
+                                <option value="current_student">在校学生</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>所属学院/专业 <span class="required">*</span></th>
+                        <td>
+                            <input type="text" name="department" required class="ws" placeholder="例：土木工程学院 / 交通运输与物流学院（非校友请填"无"）">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>是否已注册校友会 <span class="required">*</span></th>
+                        <td>
+                            <label><input type="radio" name="is_registered" value="yes" required> 已注册</label>
+                            <label><input type="radio" name="is_registered" value="no" required> 未注册</label>
+                            <label><input type="radio" name="is_registered" value="unknown" required> 不清楚</label>
+                        </td>
+                    </tr>
+                    
+                    <!-- 咨询内容 -->
+                    <tr>
+                        <th class="tamidashi2" colspan="2"><i class="fas fa-question-circle"></i> 咨询内容</th>
+                    </tr>
+                    <tr>
+                        <th>咨询类别 <span class="required">*</span></th>
+                        <td>
+                            <select name="subject" required class="ws">
+                                <option value="">请选择</option>
+                                <option value="membership">入会/会员相关咨询</option>
+                                <option value="event">活动参加/活动相关咨询</option>
+                                <option value="cooperation">企业/团体合作事宜</option>
+                                <option value="council">理事会联系</option>
+                                <option value="finance">财务报告相关</option>
+                                <option value="website">网站相关问题</option>
+                                <option value="suggestion">意见/建议</option>
+                                <option value="volunteer">志愿者/参与校友会工作</option>
+                                <option value="job">就职/招聘信息咨询</option>
+                                <option value="newlife">新来日本生活咨询</option>
+                                <option value="general">一般咨询</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>咨询标题 <span class="required">*</span></th>
+                        <td>
+                            <input type="text" name="inquiry_title" required class="ws" placeholder="请简要概括您的咨询内容">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>详细内容 <span class="required">*</span></th>
+                        <td>
+                            <textarea name="content" rows="8" required class="wl" placeholder="请详细描述您的问题或建议（至少30字）" minlength="30"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>希望的回复方式 <span class="required">*</span></th>
+                        <td>
+                            <label><input type="radio" name="reply_method" value="email" required> 邮件回复</label>
+                            <label><input type="radio" name="reply_method" value="phone" required> 电话回复</label>
+                            <label><input type="radio" name="reply_method" value="both" required> 都可以</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>希望回复时间 <span class="required">*</span></th>
+                        <td>
+                            <select name="reply_urgency" required class="ws">
+                                <option value="">请选择</option>
+                                <option value="urgent">紧急（1-2个工作日内）</option>
+                                <option value="normal">普通（1周内）</option>
+                                <option value="not_urgent">不紧急（2周内即可）</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <!-- 其他信息 -->
+                    <tr>
+                        <th class="tamidashi2" colspan="2"><i class="fas fa-info-circle"></i> 其他信息</th>
+                    </tr>
+                    <tr>
+                        <th>如何得知本网站 <span class="required">*</span></th>
+                        <td>
+                            <select name="how_found" required class="ws">
+                                <option value="">请选择</option>
+                                <option value="search">搜索引擎（Google、百度等）</option>
+                                <option value="wechat">微信</option>
+                                <option value="friend">朋友介绍</option>
+                                <option value="university">母校渠道</option>
+                                <option value="event">活动现场</option>
+                                <option value="other_alumni">其他校友会</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>是否希望收到校友会通知 <span class="required">*</span></th>
+                        <td>
+                            <label><input type="radio" name="receive_newsletter" value="yes" required> 是，希望收到活动和新闻通知</label><br>
+                            <label><input type="radio" name="receive_newsletter" value="no" required> 否，不需要</label>
+                        </td>
+                    </tr>
+                    
+                    <!-- 确认事项 -->
+                    <tr>
+                        <th class="tamidashi2" colspan="2"><i class="fas fa-check-circle"></i> 确认事项</th>
+                    </tr>
+                    <tr>
+                        <th>个人信息使用同意 <span class="required">*</span></th>
+                        <td>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacy_agree" required>
+                                我已阅读并同意<a href="privacy.html" target="_blank">个人信息保护方针</a>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>信息准确性确认 <span class="required">*</span></th>
+                        <td>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="accuracy_agree" required>
+                                我确认以上填写的信息真实准确
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> 提交咨询</button>
+                    <button type="reset" class="btn-secondary"><i class="fas fa-redo"></i> 重置表单</button>
+                </div>
+            </form>
+        </section>
+
+
+        <section class="contact-section">
+            <h3><i class="fas fa-info-circle"></i> 联系方式</h3>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>校友会网站</h4>
+                    <p><a href="https://www.swjtu.jp">www.swjtu.jp</a></p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h4>校友会注册</h4>
+                    <p><a href="signup.html">点击注册</a></p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>联系校友会</h4>
+                    <p><a href="contact.html#contact-form">在线留言</a> </p>
+                </div>
+
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-weixin"></i>
+                    </div>
+                    <h4>微信群</h4>
+                    <p>西南交大日本校友会</p>
+                    <p class="small">请联系理事会成员加入</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-weixin"></i>
+                    </div>
+                    <h4>官方公众号</h4>
+                    <a href="weixin://profile/gh_1ea1ffe698db">
+                        SWJTU揚華会
+                    </a>
+                    <p class="small">点击关注</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="contact-section">
+            <h3><i class="fas fa-link"></i> 相关链接</h3>
+            <ul class="link-list">
+                <li>
+                    <a href="https://www.swjtu.edu.cn" target="_blank">
+                        <i class="fas fa-university"></i> 西南交通大学官网
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.swjtu.edu.cn/jdxy.htm" target="_blank">
+                        <i class="fas fa-users"></i> 西南交通大学校友总会
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <div id="sub">
+        <nav>
+            <h2 class="bg1">校友服务<span>Alumni Services</span></h2>
+            <ul class="submenu">
+                <li><a href="signup.html">校友注册</a></li>
+                <li><a href="news.html">活动信息</a></li>
+                <li><a href="photos.html">活动照片</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <h2 class="bg2">友情链接<span>Links</span></h2>
+            <ul class="submenu">
+                <li><a href="https://www.swjtu.edu.cn" target="_blank">西南交通大学</a></li>
+                <li><a href="https://www.swjtu.edu.cn/jdxy.htm" target="_blank">校友总会</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-contact">
+            <h3><i class="fas fa-envelope"></i> 联系方式</h3>
+            <p>
+                <i class="fas fa-edit"></i> <a href="contact.html#contact-form">在线留言</a>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<p id="pagetop"><a href="#">↑</a></p>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>
+                <strong>西南交通大学日本校友会（揚華会）</strong><br>
+                Southwest Jiaotong University Japan Alumni Association
+            </p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">首页</a> |
+            <a href="about.html">关于我们</a> |
+            <a href="contact.html">联系我们</a> |
+            <a href="signup.html">校友注册</a> |
+            <a href="privacy.html">個人情報保護方針</a>
+        </div>
+        <p class="copyright">
+            Copyright 2025 西南交通大学日本校友会 All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+<div id="menubar_hdr" class="close"><span></span><span></span><span></span></div>
+
+<script>
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        document.body.classList.add('is-fixed');
+    } else {
+        document.body.classList.remove('is-fixed');
+    }
+});
+
+document.getElementById('menubar_hdr').addEventListener('click', function() {
+    var menubar = document.getElementById('menubar-s');
+    if (this.classList.contains('close')) {
+        this.classList.remove('close');
+        this.classList.add('open');
+        menubar.style.display = 'block';
+    } else {
+        this.classList.remove('open');
+        this.classList.add('close');
+        menubar.style.display = 'none';
+    }
+});
+</script>
+
+</body>
+</html>

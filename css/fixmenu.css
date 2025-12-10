@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+
+/*メインメニューが画面上部に到達した際の設定ファイル
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*fixmenuブロック*/
+body.is-fixed .nav-fix-pos {
+	width: 100%;z-index: 100;position: fixed;top: 0;left: 0;
+}
+/*headerブロック*/
+body.is-fixed header {
+	margin-bottom: 54px;	/*style.cssの、#menubar li aの「line-height」＋「padding-top」＋#menubar li::afterの「border-bottom」の数字を合計した数字にする*/
+}
+body.is-fixed #contents {
+	padding-top: 3%;	/*#contentsのmarginの数字と合わせる*/
+}
+body#top.is-fixed #contents {
+	padding-top: 0;
+}
+
+
+
+/*画面幅900px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:900px){
+
+/*fixmenuから折りたたみメニューになるのでリセット。*/
+body.is-fixed header {
+	margin-bottom: 0px;
+}
+body.is-fixed #contents {
+	padding-top: 0;
+}
+
+}
