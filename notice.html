@@ -19,6 +19,49 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fixmenu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .notice-item {
+            background: #f8f9fa;
+            border-left: 4px solid #003366;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .notice-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .notice-content h4 {
+            color: #003366;
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+        }
+        .notice-content p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        .notice-link {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 1px solid #003366;
+            border-radius: 3px;
+            display: inline-block;
+            margin-top: 5px;
+            transition: all 0.3s ease;
+        }
+        .notice-link:hover {
+            background-color: #003366;
+            color: white;
+        }
+        .notice-section {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
 
@@ -70,6 +113,19 @@
         
         <h2><i class="fas fa-bell"></i> 通　知</h2>
         <p>查看西南交通大学日本校友会的活动预告和重要通知。</p>
+
+        <section class="notice-section">
+            <h3><i class="fas fa-camera"></i> 最新通知</h3>
+            
+            <div class="notice-item">
+                <div class="notice-date">2025.12.21</div>
+                <div class="notice-content">
+                    <h4><i class="fas fa-images"></i> 2025年度忘年会写真</h4>
+                    <p>2025年12月22日举办的忘年会照片已上传完毕。感谢各位校友的参与，让我们一起回顾这次美好的聚会时光。</p>
+                    <p><a href="photos.html" class="notice-link"><i class="fas fa-external-link-alt"></i> 查看活动照片</a></p>
+                </div>
+            </div>
+        </section>
 
 
         <section class="notice-section">
