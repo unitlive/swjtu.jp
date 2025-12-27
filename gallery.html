@@ -246,55 +246,69 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
-// 写真データの定義
-const photoData = {
-    '20251221_2025年交通大学在日忘年会': {
-        title: '2025年交通大学在日忘年会',
-        description: '2025年12月21日に開催された忘年会の写真です',
-        photos: [
-            'pic(1).jpg',
-            'pic(2).jpg',
-            'pic(3).jpg',
-            'pic(4).jpg',
-            'pic(6).jpg',
-            'pic(11).jpg',
-            'pic(12).jpg',
-            'pic(13).jpg',
-            'pic(15).jpg',
-            'pic(16).jpg',
-            'pic(17).jpg',
-
-        ]
-    }
-};
-
 let currentPhotoIndex = 0;
 let currentPhotos = [];
 
 // ページ読み込み時の処理
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', async function() {
     const folderName = getUrlParameter('folder');
     
-    if (folderName && photoData[folderName]) {
-        loadGallery(folderName);
-    } else {
-        document.getElementById('gallery-title').innerHTML = '<i class="fas fa-exclamation-triangle"></i> 写真が見つかりません';
-        document.getElementById('gallery-description').textContent = '指定された写真フォルダが存在しません。';
+    if (!folderName) {
+        showError('指定された写真フォルダが存在しません。');
+        return;
+    }
+
+    try {
+        // 設定ファイルの読み込み
+        const response = await fetch('photos/config.json');
+        if (!response.ok) {
+            throw new Error('Config load failed');
+        }
+        const config = await response.json();
+        
+        // 該当するイベントデータを検索
+        const eventData = config.events.find(e => e.folder === folderName);
+        
+        if (eventData) {
+            // README.txtから説明文を取得してみる
+            let description = eventData.title;
+            try {
+                const readmeRes = await fetch(`photos/${folderName}/README.txt`);
+                if (readmeRes.ok) {
+                    const text = await readmeRes.text();
+                    description = text.replace(/\n/g, '<br>');
+                }
+            } catch (e) {
+                console.log('README.txt not found, using title');
+            }
+            
+            loadGallery(eventData, description);
+        } else {
+            showError('指定された写真フォルダが見つかりません。');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        showError('システムエラーが発生しました。');
     }
 });
 
+function showError(msg) {
+    document.getElementById('gallery-title').innerHTML = '<i class="fas fa-exclamation-triangle"></i> 写真が見つかりません';
+    document.getElementById('gallery-description').textContent = msg;
+}
+
 // ギャラリーを読み込む
-function loadGallery(folderName) {
-    const data = photoData[folderName];
+function loadGallery(data, description) {
+    const folderName = data.folder;
     document.getElementById('gallery-title').innerHTML = `<i class="fas fa-images"></i> ${data.title}`;
-    document.getElementById('gallery-description').textContent = data.description;
+    document.getElementById('gallery-description').innerHTML = description;
     
     const photoGrid = document.getElementById('photo-grid');
     photoGrid.innerHTML = '';
     
-    currentPhotos = data.photos.map(photo => `photos/${folderName}/${photo}`);
+    currentPhotos = data.images.map(photo => `photos/${folderName}/${photo}`);
     
-    data.photos.forEach((photo, index) => {
+    data.images.forEach((photo, index) => {
         const photoItem = document.createElement('div');
         photoItem.className = 'photo-item';
         photoItem.onclick = () => openModal(index);

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZ88KGEVPJ"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-LZ88KGEVPJ');
+        gtag('config', 'G-LZ88KGEVPJ');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,51 +27,61 @@
             gap: 25px;
             margin-top: 20px;
         }
+
         .gallery-page-item {
             background: #fff;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
         }
+
         .gallery-page-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
+
         .gallery-page-item img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             display: block;
         }
+
         .gallery-page-item .gallery-info {
             padding: 15px;
         }
+
         .gallery-page-item .gallery-info h4 {
             margin: 0 0 8px 0;
             color: #333;
             font-size: 1.1em;
         }
+
         .gallery-page-item .gallery-info p {
             margin: 0;
             color: #666;
             font-size: 0.9em;
         }
+
         .gallery-page-item .gallery-info .gallery-date {
             color: #999;
             font-size: 0.85em;
             margin-top: 8px;
         }
+
         .gallery-year-section {
             margin-bottom: 40px;
         }
+
         .gallery-year-section h3 {
             color: #003366;
             border-bottom: 2px solid #003366;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
+
         .no-photos {
             text-align: center;
             padding: 40px;
@@ -78,6 +89,7 @@
             background: #f9f9f9;
             border-radius: 10px;
         }
+
         .no-photos i {
             font-size: 3em;
             color: #ccc;
@@ -85,188 +97,253 @@
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <div class="inner">
-        <div id="logo">
-            <a href="index.html">
-                <img src="images/logo_icon.png" alt="西南交通大学日本校友会">
-            </a>
+    <header>
+        <div class="inner">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="images/logo_icon.png" alt="西南交通大学日本校友会">
+                </a>
+            </div>
+            <div id="site-title">
+                <h1>西南交通大学日本校友会</h1>
+                <span class="subtitle">揚華会 | SWJTU Japan Alumni Association</span>
+            </div>
+            <ul id="h-nav">
+                <li><a href="https://swjtu.jp" target="_blank" title="西南交通大学日本校友会"><i class="fas fa-university"></i></a>
+                </li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i></a></a></li>
+            </ul>
         </div>
-        <div id="site-title">
-            <h1>西南交通大学日本校友会</h1>
-            <span class="subtitle">揚華会 | SWJTU Japan Alumni Association</span>
-        </div>
-        <ul id="h-nav">
-            <li><a href="https://swjtu.jp" target="_blank" title="西南交通大学日本校友会"><i class="fas fa-university"></i></a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope"></i></a></a></li>
+    </header>
+
+    <nav id="menubar" class="nav-fix-pos">
+        <ul>
+            <li><a href="index.html">首 页</a></li>
+            <li><a href="news.html">最新动态</a></li>
+            <li><a href="notice.html">通 知</a></li>
+            <li class="current"><a href="photos.html">活动照片</a></li>
+            <li><a href="signup.html">校友注册</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="about.html">关于我们</a></li>
         </ul>
+    </nav>
+
+    <nav id="menubar-s">
+        <ul>
+            <li><a href="index.html">首 页</a></li>
+            <li><a href="news.html">最新动态</a></li>
+            <li><a href="notice.html">通 知</a></li>
+            <li><a href="photos.html">活动照片</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="signup.html">校友注册</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <div id="contents">
+
+        <div id="main">
+
+            <h2><i class="fas fa-images"></i> 活动照片集（...工事中...）</h2>
+            <p>记录西南交通大学日本校友会的精彩瞬间，留住校友们的美好回忆。</p>
+
+            <section class="gallery-year-section" id="2026">
+                <h3><i class="fas fa-calendar-alt"></i> 2026年活动(予定)</h3>
+                <div class="gallery-page-grid">
+                    <div class="gallery-page-item" id="gallery3">
+                        <img src="photos/gallery3.jpg" alt="春季踏青(予定)">
+                        <div class="gallery-info">
+                            <h4>春季踏青</h4>
+                            <p>樱花烂漫时，校友踏青游</p>
+                            <p class="gallery-date"><i class="fas fa-calendar"></i> 2026年6月</p>
+                        </div>
+                    </div>
+                    <div class="gallery-page-item" id="gallery2">
+                        <img src="photos/gallery2.jpg" alt="2026新年会(予定)">
+                        <div class="gallery-info">
+                            <h4>2026新年会</h4>
+                            <p>新年新气象，校友共迎春</p>
+                            <p class="gallery-date"><i class="fas fa-calendar"></i> 2026年3月</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="dynamic-gallery-container"></div>
+
+            <section class="gallery-year-section" id="old-history">
+                <h3><i class="fas fa-calendar-alt"></i> 校友会成立（2015年）～2024年</h3>
+                <div class="no-photos">
+                    <i class="fas fa-camera"></i>
+                    <p>历史照片整理中，敬请期待...</p>
+                </div>
+            </section>
+
+        </div>
+
+        <div id="sub">
+            <nav>
+                <h2 class="bg1">校友服务<span>Alumni Services</span></h2>
+                <ul class="submenu">
+                    <li><a href="signup.html">校友注册</a></li>
+                    <li><a href="news.html">活动信息</a></li>
+                    <li><a href="photos.html">活动照片</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 class="bg2">友情链接<span>Links</span></h2>
+                <ul class="submenu">
+                    <li><a href="https://www.swjtu.edu.cn" target="_blank">西南交通大学</a></li>
+                    <li><a href="https://www.swjtu.edu.cn/jdxy.htm" target="_blank">校友总会</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-contact">
+                <h3><i class="fas fa-envelope"></i> 联系方式</h3>
+                <p>
+                    <i class="fas fa-edit"></i> <a href="contact.html#contact-form">在线留言</a>
+                </p>
+            </div>
+        </div>
+
     </div>
-</header>
 
-<nav id="menubar" class="nav-fix-pos">
-    <ul>
-        <li><a href="index.html">首 页</a></li>
-        <li><a href="news.html">最新动态</a></li>
-        <li><a href="notice.html">通 知</a></li>
-        <li class="current"><a href="photos.html">活动照片</a></li>
-        <li><a href="signup.html">校友注册</a></li>
-        <li><a href="contact.html">联系我们</a></li>
-        <li><a href="about.html">关于我们</a></li>
-    </ul>
-</nav>
+    <p id="pagetop"><a href="#">↑</a></p>
 
-<nav id="menubar-s">
-    <ul>
-        <li><a href="index.html">首 页</a></li>
-        <li><a href="news.html">最新动态</a></li>
-        <li><a href="notice.html">通 知</a></li>
-        <li><a href="photos.html">活动照片</a></li>
-        <li><a href="about.html">关于我们</a></li>
-        <li><a href="signup.html">校友注册</a></li>
-        <li><a href="contact.html">联系我们</a></li>
-    </ul>
-</nav>
-
-<div id="contents">
-
-    <div id="main">
-        
-        <h2><i class="fas fa-images"></i> 活动照片集（...工事中...）</h2>
-        <p>记录西南交通大学日本校友会的精彩瞬间，留住校友们的美好回忆。</p>
-
-        <section class="gallery-year-section" id="2026">
-            <h3><i class="fas fa-calendar-alt"></i> 2026年活动(予定)</h3>
-            <div class="gallery-page-grid">
-                <div class="gallery-page-item" id="gallery3">
-                    <img src="photos/gallery3.jpg" alt="春季踏青(予定)">
-                    <div class="gallery-info">
-                        <h4>春季踏青</h4>
-                        <p>樱花烂漫时，校友踏青游</p>
-                        <p class="gallery-date"><i class="fas fa-calendar"></i> 2026年6月</p>
-                    </div>
-                </div>
-                <div class="gallery-page-item" id="gallery2">
-                    <img src="photos/gallery2.jpg" alt="2026新年会(予定)">
-                    <div class="gallery-info">
-                        <h4>2026新年会</h4>
-                        <p>新年新气象，校友共迎春</p>
-                        <p class="gallery-date"><i class="fas fa-calendar"></i> 2026年3月</p>
-                    </div>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>
+                    <strong>西南交通大学日本校友会（揚華会）</strong><br>
+                    Southwest Jiaotong University Japan Alumni Association
+                </p>
             </div>
-        </section>
-
-        <section class="gallery-year-section" id="2025">
-            <h3><i class="fas fa-calendar-alt"></i> 2025年活动</h3>
-            <div class="gallery-page-grid">
-                <div class="gallery-page-item" onclick="openGallery('20251221_2025年交通大学在日忘年会')">
-                    <img src="photos/20251221_2025年交通大学在日忘年会/pic(1).jpg" alt="2025年交通大学在日忘年会">
-                    <div class="gallery-info">
-                        <h4>2025年交通大学元旦校友会年会</h4>
-                        <p>共済同源情，携手迎新年<br>
-                            2025年交通大学元旦校友会年会在东京举行<br>
-                            岁末相聚东京，共叙交大情谊<br>
-                            岁序更替 ，情谊如初</p>
-                        <p class="gallery-date"><i class="fas fa-calendar"></i> 2025年12月21日</p>
-                    </div>
-                </div>
+            <div class="footer-links">
+                <a href="index.html">首页</a> |
+                <a href="about.html">关于我们</a> |
+                <a href="contact.html">联系我们</a> |
+                <a href="signup.html">校友注册</a> |
+                <a href="privacy.html">個人情報保護方針</a>
             </div>
-        </section>
-
-
-        <section class="gallery-year-section" id="2015">
-            <h3><i class="fas fa-calendar-alt"></i> 校友会成立（2015年）～2024年</h3>
-            <div class="no-photos">
-                <i class="fas fa-camera"></i>
-                <p>历史照片整理中，敬请期待...</p>
-            </div>
-        </section>
-
-    </div>
-
-    <div id="sub">
-        <nav>
-            <h2 class="bg1">校友服务<span>Alumni Services</span></h2>
-            <ul class="submenu">
-                <li><a href="signup.html">校友注册</a></li>
-                <li><a href="news.html">活动信息</a></li>
-                <li><a href="photos.html">活动照片</a></li>
-            </ul>
-        </nav>
-
-        <nav>
-            <h2 class="bg2">友情链接<span>Links</span></h2>
-            <ul class="submenu">
-                <li><a href="https://www.swjtu.edu.cn" target="_blank">西南交通大学</a></li>
-                <li><a href="https://www.swjtu.edu.cn/jdxy.htm" target="_blank">校友总会</a></li>
-            </ul>
-        </nav>
-
-        <div class="sidebar-contact">
-            <h3><i class="fas fa-envelope"></i> 联系方式</h3>
-            <p>
-                <i class="fas fa-edit"></i> <a href="contact.html#contact-form">在线留言</a>
+            <p class="copyright">
+                Copyright 2025 西南交通大学日本校友会 All Rights Reserved.
             </p>
         </div>
-    </div>
+    </footer>
 
-</div>
+    <div id="menubar_hdr" class="close"><span></span><span></span><span></span></div>
 
-<p id="pagetop"><a href="#">↑</a></p>
+    <script>
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                document.body.classList.add('is-fixed');
+            } else {
+                document.body.classList.remove('is-fixed');
+            }
+        });
 
-<footer>
-    <div class="footer-content">
-        <div class="footer-info">
-            <p>
-                <strong>西南交通大学日本校友会（揚華会）</strong><br>
-                Southwest Jiaotong University Japan Alumni Association
-            </p>
-        </div>
-        <div class="footer-links">
-            <a href="index.html">首页</a> |
-            <a href="about.html">关于我们</a> |
-            <a href="contact.html">联系我们</a> |
-            <a href="signup.html">校友注册</a> |
-            <a href="privacy.html">個人情報保護方針</a>
-        </div>
-        <p class="copyright">
-            Copyright 2025 西南交通大学日本校友会 All Rights Reserved.
-        </p>
-    </div>
-</footer>
+        document.getElementById('menubar_hdr').addEventListener('click', function () {
+            var menubar = document.getElementById('menubar-s');
+            if (this.classList.contains('close')) {
+                this.classList.remove('close');
+                this.classList.add('open');
+                menubar.style.display = 'block';
+            } else {
+                this.classList.remove('open');
+                this.classList.add('close');
+                menubar.style.display = 'none';
+            }
+        });
 
-<div id="menubar_hdr" class="close"><span></span><span></span><span></span></div>
+        // 写真ギャラリーを開く機能
+        function openGallery(folderName) {
+            // 新しいウィンドウまたはタブで写真ギャラリーページを開く
+            window.open('gallery.html?folder=' + encodeURIComponent(folderName), '_blank');
+        }
 
-<script>
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 100) {
-        document.body.classList.add('is-fixed');
-    } else {
-        document.body.classList.remove('is-fixed');
-    }
-});
+        // 動的にギャラリーを読み込む
+        window.addEventListener('DOMContentLoaded', async function () {
+            try {
+                const response = await fetch('photos/config.json');
+                if (!response.ok) throw new Error('Config load failed');
+                const config = await response.json();
+                const events = config.events;
 
-document.getElementById('menubar_hdr').addEventListener('click', function() {
-    var menubar = document.getElementById('menubar-s');
-    if (this.classList.contains('close')) {
-        this.classList.remove('close');
-        this.classList.add('open');
-        menubar.style.display = 'block';
-    } else {
-        this.classList.remove('open');
-        this.classList.add('close');
-        menubar.style.display = 'none';
-    }
-});
+                // 年ごとにグループ化
+                const eventsByYear = {};
+                events.forEach(event => {
+                    const year = event.date.split('-')[0];
+                    if (!eventsByYear[year]) eventsByYear[year] = [];
+                    eventsByYear[year].push(event);
+                });
 
-// 写真ギャラリーを開く機能
-function openGallery(folderName) {
-    // 新しいウィンドウまたはタブで写真ギャラリーページを開く
-    window.open('gallery.html?folder=' + encodeURIComponent(folderName), '_blank');
-}
-</script>
+                // 年を降順でソート
+                const sortedYears = Object.keys(eventsByYear).sort((a, b) => b - a);
+                const container = document.getElementById('dynamic-gallery-container');
+
+                for (const year of sortedYears) {
+                    const section = document.createElement('section');
+                    section.className = 'gallery-year-section';
+                    section.id = year;
+                    section.innerHTML = `<h3><i class="fas fa-calendar-alt"></i> ${year}年活动</h3>`;
+
+                    const grid = document.createElement('div');
+                    grid.className = 'gallery-page-grid';
+
+                    // イベントを日付順（新しい順）にソート
+                    const yearEvents = eventsByYear[year].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                    for (const event of yearEvents) {
+                        const dateObj = new Date(event.date);
+                        const dateStr = `${dateObj.getFullYear()}年${dateObj.getMonth() + 1}月${dateObj.getDate()}日`;
+
+                        const item = document.createElement('div');
+                        item.className = 'gallery-page-item';
+                        item.onclick = () => openGallery(event.folder);
+
+                        const coverImg = event.images && event.images.length > 0 ? event.images[0] : 'default.jpg';
+
+                        item.innerHTML = `
+                    <img src="photos/${event.folder}/${coverImg}" alt="${event.title}">
+                    <div class="gallery-info">
+                        <h4>${event.title}</h4>
+                        <p class="gallery-desc-preview" id="desc-${event.folder}">読み込み中...</p> 
+                        <p class="gallery-date"><i class="fas fa-calendar"></i> ${dateStr}</p>
+                    </div>
+                `;
+                        grid.appendChild(item);
+
+                        // README.txtを取得してプレビューを表示
+                        fetch(`photos/${event.folder}/README.txt`)
+                            .then(res => res.ok ? res.text() : '')
+                            .then(text => {
+                                if (text) {
+                                    // 最初の3行を表示
+                                    const snippet = text.split('\\n').slice(0, 3).join('<br>');
+                                    document.getElementById(`desc-${event.folder}`).innerHTML = snippet;
+                                } else {
+                                    document.getElementById(`desc-${event.folder}`).textContent = '';
+                                }
+                            })
+                            .catch(() => {
+                                document.getElementById(`desc-${event.folder}`).textContent = '';
+                            });
+                    }
+
+                    section.appendChild(grid);
+                    container.appendChild(section);
+                }
+
+            } catch (e) {
+                console.error("Failed to load gallery config", e);
+            }
+        });
+    </script>
 
 </body>
+
 </html>
