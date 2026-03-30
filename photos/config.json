@@ -1,6 +1,28 @@
 {
     "events": [
         {
+            "folder": "20260328_2026年春季赏樱会",
+            "title": "2026年春季赏樱会",
+            "date": "2026-03-28",
+            "images": [
+                "pic(1).jpeg", "pic(2).jpeg", "pic(3).jpeg", "pic(4).jpeg",
+                "pic(5).jpeg", "pic(6).jpeg", "pic(7).jpeg", "pic(8).jpeg",
+                "pic(9).jpeg", "pic(10).jpeg", "pic(11).jpeg", "pic(12).jpeg",
+                "pic(13).jpeg", "pic(14).jpeg", "pic(15).jpeg", "pic(16).jpeg",
+                "pic(17).jpeg"
+            ]
+        },
+        {
+            "folder": "20260208_交通大学建校130周年纪念会暨2026新年会",
+            "title": "交通大学建校130周年纪念会暨2026新年会",
+            "date": "2026-02-08",
+            "images": [
+                "pic(1).png", "pic(2).png", "pic(3).png", "pic(4).png",
+                "pic(5).png", "pic(6).png", "pic(7).png", "pic(8).png",
+                "pic(9).png", "pic(10).jpeg", "pic(11).png", "pic(12).png"
+            ]
+        },
+        {
             "folder": "20251221_2025年交通大学在日忘年会",
             "title": "2025年交通大学元旦校友会年会",
             "date": "2025-12-21",
