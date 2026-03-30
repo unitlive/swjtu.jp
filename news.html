@@ -19,6 +19,43 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fixmenu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* アコーディオン */
+        .news-item h3 {
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+            user-select: none;
+        }
+        .news-item h3:hover {
+            opacity: 0.75;
+        }
+        .news-item h3 .toggle-icon {
+            flex-shrink: 0;
+            font-size: 0.75em;
+            margin-top: 4px;
+            color: #888;
+            transition: transform 0.3s ease;
+        }
+        .news-item.open h3 .toggle-icon {
+            transform: rotate(180deg);
+        }
+        .news-item .news-date {
+            display: none;
+        }
+        .news-item.open .news-date {
+            display: block;
+        }
+        .news-item .news-content {
+            display: none;
+            overflow: hidden;
+        }
+        .news-item.open .news-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -72,7 +109,7 @@
         <p>了解西南交通大学日本校友会的最新活动和新闻动态。</p>
 
         <article class="news-item" id="spring2026">
-            <h3><span class="newicon">NEW</span> 赏春光聚校友情，庆华诞期新愿景——交通大学日本校友会联盟2026年春季赏樱会在东京圆满举行</h3>
+            <h3><span class="newicon">NEW</span> 赏春光聚校友情，庆华诞期新愿景——交通大学日本校友会联盟2026年春季赏樱会在东京圆满举行<i class="fas fa-chevron-down toggle-icon"></i></h3>
             <p class="news-date"><i class="fas fa-calendar"></i> 2026年3月28日</p>
             <div class="news-content">
                 <p style="font-style: italic; color: #777;">燕草如碧丝，东樱似粉霞。</p>
@@ -136,7 +173,7 @@
         </article>
 
         <article class="news-item" id="newyear2026-party">
-            <h3><span class="newicon">NEW</span> 共庆百卅华诞，携手展望新程——交通大学建校130周年纪念会暨2026新年会在东京隆重举行</h3>
+            <h3><span class="newicon">NEW</span> 共庆百卅华诞，携手展望新程——交通大学建校130周年纪念会暨2026新年会在东京隆重举行<i class="fas fa-chevron-down toggle-icon"></i></h3>
             <p class="news-date"><i class="fas fa-calendar"></i> 2026年2月8日</p>
             <div class="news-content">
                 <p>2026年2月8日，交通大学建校130周年纪念会暨2026新年会在东京银座 THE BAGUS PLACE 隆重举行。本次活动由交通大学日本校友会联盟主办，上海交通大学（以下简称"上交"）、西安交通大学（以下简称"西交"）、西南交通大学（以下简称"西南交"）、北京交通大学（以下简称"北交"）日本校友会共同参与组织。来自中国驻日本大使馆、在日高校校友会及社会各界的嘉宾，与交通大学在日校友齐聚一堂，共同庆祝迎新春。</p>
@@ -204,7 +241,7 @@
         </article>
 
         <article class="news-item" id="newyear2026">
-            <h3><span class="newicon">NEW</span> 2026年新年贺词</h3>
+            <h3><span class="newicon">NEW</span> 2026年新年贺词<i class="fas fa-chevron-down toggle-icon"></i></h3>
             <p class="news-date"><i class="fas fa-calendar"></i> 2026年1月1日</p>
             <div class="news-content">
                 <h4 style="text-align: center; color: #d32f2f;">2026，新年快乐！！</h4>
@@ -224,7 +261,7 @@
         </article>
 
         <article class="news-item" id="event1">
-            <h3><span class="newicon">NEW</span> 2025年度忘年会通知</h3>
+            <h3><span class="newicon">NEW</span> 2025年度忘年会通知<i class="fas fa-chevron-down toggle-icon"></i></h3>
             <p class="news-date"><i class="fas fa-calendar"></i> 2025年12月1日</p>
             <div class="news-content">
                 <p>亲爱的各位校友，大家好。：</p>
@@ -247,7 +284,7 @@
 
 
         <article class="news-item" id="event2">
-            <h3>西南交通大学日本校友会第二届理事会选举圆满结束公告</h3>
+            <h3>西南交通大学日本校友会第二届理事会选举圆满结束公告<i class="fas fa-chevron-down toggle-icon"></i></h3>
             <p class="news-date"><i class="fas fa-calendar"></i> 2025年11月29日</p>
             <div class="news-content">
                 <p>西南交通大学日本校友会第二届理事会选举已于近日顺利完成。在全体校友的积极参与和支持下，<br>
@@ -325,6 +362,22 @@ window.addEventListener('scroll', function() {
         document.body.classList.remove('is-fixed');
     }
 });
+
+// アコーディオン
+(function() {
+    var items = document.querySelectorAll('.news-item');
+    var targetId = location.hash ? location.hash.slice(1) : null;
+    items.forEach(function(item) {
+        // URLハッシュで指定された記事だけ最初から開く
+        if (targetId && item.id === targetId) {
+            item.classList.add('open');
+        }
+        var h3 = item.querySelector('h3');
+        h3.addEventListener('click', function() {
+            item.classList.toggle('open');
+        });
+    });
+})();
 
 document.getElementById('menubar_hdr').addEventListener('click', function() {
     var menubar = document.getElementById('menubar-s');
